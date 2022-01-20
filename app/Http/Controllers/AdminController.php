@@ -12,4 +12,6 @@ class AdminController extends Controller
             'user' => 'admin'
         ]);
     }
+
+
 }

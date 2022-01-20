@@ -3,8 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Facades\Storage;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Carbon;
 use Illuminate\Http\Request;
@@ -23,7 +24,7 @@ class PostsModel extends Model
 
     public function createPostItem($request)
     {
-        $createData = $request-all();
+        $createData = $request->all();
         DB::table('posts')->insert([
             'text' => $createData['text'],
             'name' => $createData['name'],

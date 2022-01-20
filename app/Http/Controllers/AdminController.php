@@ -9,18 +9,20 @@ class AdminController extends Controller
 {
     public function dashboard()
     {
+        // $user = AdminModel::getUserName($id);
         return view('admin/dashboard', [
-            'user' => 'admin'
+            // 'user' => $user,
+            'data' => 'data'
         ]);
     }
 
-    public function showUserName($id)
-    {
-        if(isset($id)){
-            return AdminModel::getUserName($id);
-        } else {
-            return 'noName!';}
-    }
+    // public function showUserName($id)
+    // {
+    //     if(isset($id)){
+    //         return AdminModel::getUserName($id);
+    //     } else {
+    //         return 'noName!';}
+    // }
 
 
 }

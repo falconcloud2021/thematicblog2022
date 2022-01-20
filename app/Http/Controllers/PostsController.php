@@ -12,28 +12,27 @@ class PostsController extends Controller
     // MAIN View methods admin panel
     public function showPostsList()
     {
-        $user = AdminModel::getUserName();
-        $posts = PostsModel::getPostsData();
+        // $user = AdminModel::getUserName();
+        // $posts = PostsModel::getPostsData();
         return view('admin/posts_table', [
-            'user' => $user,
-            'posts' => $posts
+            'user' => 'admin',
+            // 'posts' => $posts
         ]);
     }
 
     public function showArchivedPostsList()
     {
-        $archivedPosts = PostsModel::getPostsModel();
+        // $archivedPosts = PostsModel::getPostsModel();
         return view('admin/posts_archived', [
-            'posts' => $archivedPosts
-
+            // 'posts' => $archivedPosts
         ]);
     }
 
     public function showPostItem($id)
     {
-        $post = PostsModel::getPostByID($id);
+        // $post = PostsModel::getPostByID($id);
         return view('admin/post_item', [
-            'post' => $post
+            // 'post' => $post
         ]);
     }
 
@@ -46,20 +45,19 @@ class PostsController extends Controller
     // CRUD methods admin panel
     public function createNewPost()
     {
-        $user = AdminModel::getUserName();
-        $createPost = PostsModel::createPostItem();
+        // $createPost = PostsModel::createPostItem();
         return view('admin/create_post', [
-            'user' => $user
+            'user' => 'admin'
         ]);
     }
 
     public function updatePost($id)
     {
-        $post = PostsModel::getPostByID($id);
-        $updatePost = PostsModel::updatePostItem($id);
+        // $post = PostsModel::getPostByID($id);
+        // $updatePost = PostsModel::updatePostItem($id);
         return view('admin/edit_post', [
-            'post' => $post,
-            'id' => $id
+            // 'post' => $post,
+            // 'id' => $id
         ]);
     }
 
@@ -70,12 +68,12 @@ class PostsController extends Controller
 
     public function removePostToArchive($id)
     {
-        $removePost = PostsModel::sendPostToArchive();
+        // $removePost = PostsModel::sendPostToArchive();
     }
 
     public function deletePost($id)
     {
-        PostsModel::deletePostItem();
+        // PostsModel::deletePostItem();
     }
 
 

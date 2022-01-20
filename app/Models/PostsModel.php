@@ -41,6 +41,18 @@ class PostsModel extends Model
             ]);
     }
 
+    public function sendPostToArchive($id, $request)
+    {
+        $archive = $request;
+    }
+
+    public function deletePostItem($id)
+    {
+        DB::table('posts')
+            ->where('id', $id)
+            ->delete();
+    }
+
 
     // use HasFactory;
 }

@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\AdminController;
+use Illuminate\Http\Request;
 use App\Http\Models\AdminModel;
 use App\Http\Models\PostsModel;
 
 class PostsController extends Controller
 {
     // MAIN View methods admin panel
-    public function showPostsList()
+    public function showPostsTables()
     {
         // $user = AdminModel::getUserName();
         // $posts = PostsModel::getPostsData();
-        return view('admin/posts_table', [
+        return view('admin/posts_tables', [
             'user' => 'admin',
             // 'posts' => $posts
         ]);

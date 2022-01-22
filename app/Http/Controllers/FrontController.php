@@ -31,4 +31,5 @@ class FrontController extends Controller
             'user' => 'user'
         ]);
     }
+
 }

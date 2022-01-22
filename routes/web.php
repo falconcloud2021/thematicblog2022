@@ -5,6 +5,7 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\FrontUserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\OrganizerController;
 
 
 /*
@@ -23,10 +24,11 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/',         [FrontController::class, 'index'])->name('index');
+Route::get('/contacts', [FrontController::class, 'showContacts'])->name('contacts');
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
-    Route::get('/admin/dashboard',         [AdminController::class, 'dashboard'])->name('dashboard');
+    Route::get('/admin/dashboard',          [AdminController::class, 'dashboard'])->name('dashboard');
 
     // Show & CRUD posts routes admin panel
     Route::get('/admin/posts-tables',       [PostsController::class, 'showPostsTables'])->name('show_posts');
@@ -37,6 +39,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::post('/admin/post/save/{id}',    [PostsController::class, 'showPostItem'])->name('save_post');
     Route::any('/admin/post/archive/{id}',  [PostsController::class, 'removePostToArchive'])->name('archive_post');
     Route::any('/admin/post/delete/{id}',   [PostsController::class, 'deletePost'])->name('delete_post');
+    // Show & CRUD organizer admin panel
+    Route::get('/admin/organizer',          [OrganizerController::class, 'showOrganizerPage']);
 
 
 });

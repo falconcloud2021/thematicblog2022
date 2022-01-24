@@ -6,7 +6,8 @@
     <title>Lara blog</title>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.2/tailwind.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
+    {{-- <link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> --}}
     <link href="https://cdn.tailgrids.com/tailgrids-fallback.css" rel="stylesheet" />
     <!-- Small CSS to Hide elements at 1520px size -->
     <style>
@@ -109,7 +110,7 @@
             <div class="container">
                 <div class="flex flex-wrap -mx-4">
 
-                    <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                    <div class="w-full md:w-1/2 xl:w-1/3 px-4 transform transition duration-500 hover:scale-105">
                         <div class="bg-white rounded-lg overflow-hidden mb-10">
                         <img src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-01.jpg" alt="image" class="w-full" />
                             <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
@@ -128,7 +129,7 @@
                         </div>
                     </div>
 
-                    <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                    <div class="w-full md:w-1/2 xl:w-1/3 px-4 transform transition duration-500 hover:scale-105">
                         <div class="bg-white rounded-lg overflow-hidden mb-10">
                         <img src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-02.jpg" alt="image" class="w-full" />
                         <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
@@ -147,7 +148,7 @@
                         </div>
                     </div>
 
-                    <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                    <div class="w-full md:w-1/2 xl:w-1/3 px-4 transform transition duration-500 hover:scale-105">
                         <div class="bg-white rounded-lg overflow-hidden mb-10">
                         <img src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-03.jpg" alt="image" class="w-full" />
                         <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
@@ -341,7 +342,7 @@
             <div class="max-w-full mx-auto md:max-w-6xl sm:px-8">
                 <!-- Basic Pricing -->
                 <div class="relative flex flex-col items-center block sm:flex-row">
-                    <div class="relative z-0 w-11/12 max-w-sm my-8 border border-gray-200 rounded-lg sm:w-3/5 lg:w-1/3 sm:my-5 md:-mr-4">
+                    <div class="relative z-0 w-11/12 max-w-sm my-8 border border-gray-200 rounded-lg sm:w-3/5 lg:w-1/3 sm:my-5 md:-mr-4 transform transition duration-500 hover:scale-105">
                         <div class="overflow-hidden text-black bg-white border-t border-gray-100 rounded-lg shadow-sm">
                             <div class="block max-w-sm px-8 mx-auto mt-5 text-sm text-left text-black sm:text-md lg:px-6">
                                 <h3 class="p-3 text-lg font-bold tracking-wide text-center uppercase">Basic<span class="ml-2 font-light">Plan</span></h3>
@@ -394,8 +395,7 @@
                         </div>
                     </div>
                     <!-- Pro Pricing -->
-                    <div
-                        class="relative z-10 w-full max-w-md my-8 bg-white rounded-lg shadow-lg sm:w-2/3 lg:w-1/3 sm:my-5">
+                    <div class="relative z-10 w-full max-w-md my-8 bg-white rounded-lg shadow-lg sm:w-2/3 lg:w-1/3 sm:my-5 transform transition duration-500 hover:scale-105">
                         <div class="py-4 text-sm font-semibold leading-none tracking-wide text-center text-white uppercase bg-indigo-500 rounded-t">
                             Most Popular</div>
                         <div class="block max-w-sm px-8 mx-auto mt-5 text-sm text-left text-black sm:text-md lg:px-6">
@@ -446,8 +446,7 @@
                         </div>
                     </div>
                     <!-- Premium Pricing -->
-                    <div
-                        class="relative z-0 w-11/12 max-w-sm my-8 rounded-lg shadow-lg sm:w-3/5 lg:w-1/3 sm:my-5 md:-ml-4">
+                    <div class="relative z-0 w-11/12 max-w-sm my-8 rounded-lg shadow-lg sm:w-3/5 lg:w-1/3 sm:my-5 md:-ml-4 transform transition duration-500 hover:scale-105">
                         <div class="overflow-hidden text-black bg-white rounded-lg shadow-lg shadow-inner">
                             <div class="block max-w-sm px-8 mx-auto mt-5 text-sm text-left text-black sm:text-md lg:px-8">
                                 <h3 class="p-3 pb-1 text-lg font-bold tracking-wide text-center uppercase">Premium
@@ -603,8 +602,7 @@
                 <p class="pr-0 mb-8 text-base text-gray-600 sm:text-lg xl:text-xl lg:pr-20">
                     Are you ready to start your adventure and start building the next greatest SAAS app on the market?
                 </p>
-                <a href="#_"
-                    class="relative self-start inline-block w-auto px-8 py-4 mx-auto mt-0 text-base font-bold text-white bg-indigo-600 border-t border-gray-200 rounded-md shadow-xl sm:mt-1 fold-bold lg:mx-0">Signup
+                <a href="#_" class="relative self-start inline-block w-auto px-8 py-4 mx-auto mt-0 text-base font-bold text-white bg-indigo-600 border-t border-gray-200 rounded-md shadow-xl sm:mt-1 fold-bold lg:mx-0">Signup
                     Today!</a>
                 <!-- Integrates with section -->
                 <div class="flex-col hidden mt-12 sm:flex lg:mt-24">

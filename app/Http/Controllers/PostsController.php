@@ -28,13 +28,13 @@ class PostsController extends Controller
         ]);
     }
 
-    public function showPostItem($id)
-    {
-        // $post = PostsModel::getPostByID($id);
-        return view('admin/post_item', [
-            // 'post' => $post
-        ]);
-    }
+    // public function showPostItem($id)
+    // {
+    //     // $post = PostsModel::getPostByID($id);
+    //     return view('admin/post_item', [
+    //         // 'post' => $post
+    //     ]);
+    // }
 
     // Filter posts-table methods admin panel
     public function filterPostsRelatedData(Request $request)

@@ -5,6 +5,7 @@
 <main class="h-full overflow-y-auto">
     <div class="container px-6 mx-auto grid">
     <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"> Posts </h2>
+
     <!-- Cards -->
     <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
         <!-- Card -->
@@ -70,8 +71,18 @@
     <hr>
 
     <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300">
-        Table with actions
+        Total Posts list
     </h4>
+    <!-- Create new Post button. -->
+    <div>
+        <form action="{{ route('create_post') }}" method="GET">
+            @csrf
+            <button class="px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+                Create New Post!
+            </button>
+        </form>
+    </div>
+
     <div class="w-full overflow-hidden rounded-lg shadow-xs">
         <div class="w-full overflow-x-auto">
         <table class="w-full whitespace-no-wrap">
@@ -87,14 +98,14 @@
             </tr>
             </thead>
             <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800">
-
+                {{-- @foreach($posts as $post) --}}
             <tr class="text-gray-700 dark:text-gray-400">
                 <td class="px-4 py-3">
                 <div class="flex items-center text-sm">
                     <!-- Avatar with inset shadow -->
-                    <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block">
-                    <img class="object-cover w-full h-full rounded-full" src="#" alt="" loading="lazy" />
-                    <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                    <div class="relative hidden w-8 h-8 mr-3 rounded-full md:block brightness-110">
+                        <img class="object-cover w-full h-full rounded-full" src="#" alt="" loading="lazy" />
+                        <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
                     </div>
                     <div>
                     <p class="font-semibold">Hans Burger</p>
@@ -120,12 +131,15 @@
                 <td class="px-4 py-3 text-sm"> 6/10/2020 </td>
                 <td class="px-4 py-3">
                 <div class="flex items-center space-x-4 text-sm">
-                    <button class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
-                    aria-label="Show">
-                    <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"></path>
-                    </svg>
-                    </button>
+                    {{-- <a href="/admin/post/{{ $post->id }}">
+                        <button class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                            aria-label="Show">
+                            <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            </svg>
+                        </button>
+                    </a> --}}
+
                     <button class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                     aria-label="Edit">
                     <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
@@ -255,7 +269,7 @@
                 </div>
                 </td>
             </tr>
-
+                {{-- @endforeach --}}
             </tbody>
         </table>
         </div>
@@ -305,7 +319,7 @@
     <!-- Archived Posts Table -->
     <hr>
 
-    <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300"> Archived list </h4>
+    <h4 class="mb-4 text-lg font-semibold text-gray-600 dark:text-gray-300"> Archived Posts list </h4>
     <div class="w-full overflow-hidden rounded-lg shadow-xs">
         <div class="w-full overflow-x-auto">
         <table class="w-full whitespace-no-wrap">

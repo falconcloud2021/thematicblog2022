@@ -32,9 +32,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     // Show & CRUD posts routes admin panel
     Route::get('/admin/posts-tables',       [PostsController::class, 'showPostsTables'])->name('show_posts');
-    Route::get('/admin/post/{id}',          [PostsController::class, 'showPostItem'])->name('show_post_item');
+    // Route::get('/admin/post/{id}',          [PostsController::class, 'showPostItem'])->name('show_post_item');
     Route::get('/admin/posts/filter-table', [PostsController::class, 'filterPostsRelatedData'])->name('filter_table');
-    Route::post('/admin/post/create',       [PostsController::class, 'createNewPost'])->name('create_post');
+    Route::get('/admin/post/create',        [PostsController::class, 'createNewPost'])->name('create_post');
     Route::post('/admin/post/edit/{id}',    [PostsController::class, 'updatePost'])->name('edit_post');
     Route::post('/admin/post/save/{id}',    [PostsController::class, 'showPostItem'])->name('save_post');
     Route::any('/admin/post/archive/{id}',  [PostsController::class, 'removePostToArchive'])->name('archive_post');
